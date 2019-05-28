@@ -141,6 +141,7 @@ class FAB extends React.Component<Props, State> {
       onPress,
       theme,
       style,
+      customStyles = {},
       visible,
       loading,
       ...rest
@@ -210,6 +211,7 @@ class FAB extends React.Component<Props, State> {
             style={[
               styles.content,
               label ? styles.extended : small ? styles.small : styles.standard,
+              customStyles.content,
             ]}
             pointerEvents="none"
           >
